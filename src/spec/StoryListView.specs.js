@@ -1,8 +1,8 @@
 describe('StoryListView', function() {
   var storyListView;
 
-  it('has an empty list by default', function() {
-    storyListView = new StoryListView();
-    expect(storyListView.list).toEqual([])
-  })
+  // it('takes an argument', function() {
+  //   storyListView = new StoryListView([StoryModel]);
+  //   expect(storyListView.list).toBe(Array)
+  // })
 })

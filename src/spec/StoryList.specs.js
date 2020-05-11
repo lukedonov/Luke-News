@@ -12,4 +12,10 @@ describe('StoryList', function() {
     storylist.getStories()
     expect(storylist.listOfStories.length).toEqual(10)
   })
+
+  it('can recieve stories from the guardian api', function() {
+    storylist = new StoryList();
+    storylist.getStories()
+    expect(storylist.listOfStories[0]).toBeInstanceOf(StoryModel)
+  })
 })

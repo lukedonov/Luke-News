@@ -19,7 +19,6 @@
         this.addStory(new StoryModel(story.webTitle, story.webUrl))
       }
       document.getElementById("stories").innerHTML = this.storyListView.viewHeadlines()
-     
     }).catch(function (error) {
       console.warn('Something went wrong.', error);
     });

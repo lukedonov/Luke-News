@@ -1,14 +1,24 @@
-const http = require('http');
-const fs = require('fs')
+var http = require('http');
+var fs = require('fs');
 
-// Create an instance of the http server to handle HTTP requests
-let app = http.createServer((req, res) => {
-    // Set a response type of plain text for the response
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
-    myReadStream.pipe(res);
+var server = http.createServer(function(req, resp){
+  // Print the name of the file for which request is made.
+  console.log("Request for demo file received.");
+  fs.readFile("Documents/nodejs/demo.html",function(error, data){
+    if (error) {
+      resp.writeHead(404);
+      resp.write('not found');
+      resp.end();
+    }  else {
+      resp.writeHead(200, {
+        'Content-Type': 'text/html'
+      });
+      resp.write(data.toString());
+      resp.end();
+    }
+  });
 });
 
-// Start the server on port 3000
-app.listen(3000, '127.0.0.1');
-console.log('Node server running on port 3000');
+server.listen(3000, '127.0.0.1');
+
+console.log('Server running at http://127.0.0.1:3000/');

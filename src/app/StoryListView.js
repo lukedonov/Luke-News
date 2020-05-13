@@ -9,7 +9,7 @@
     for (i=0; i < (this.list).length; i++) {
       headlines.push(this.list[i].headline)
     }
-    return "<ul><li><div class='story'>" + (headlines.join("</div></li><li><div class='story'>")) + "</div></li></ul>"
+    return "<div><div class='list'><div class='story'><p>" + (headlines.join("</p></div></div><div class='list'><div class='story'><p>")) + "</p></div></div</div>"
   }
 
 

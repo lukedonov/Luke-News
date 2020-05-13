@@ -1,5 +1,16 @@
 .story{
+  border-radius: 5px;
   border: black solid;
   margin-bottom: 5px;
-  height: 40px
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: 'Helvetica Neue';
 }
+
+.list{
+  background-color: rgba(97, 192, 255, 0.3);
+}
+
+

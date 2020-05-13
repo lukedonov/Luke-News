@@ -13,4 +13,18 @@
   background-color: rgba(97, 192, 255, 0.3);
 }
 
+.headerContainer{
+  width: 100%;
+  position: fixed;        
+  background: #333;
+  color: #fff;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.header{
+  font-size: 30px;
+  font-family: 'Helvetica Neue';
+}
+
 

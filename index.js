@@ -18,6 +18,10 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/api/stories', function(req, res) {
+
+});
+
 app.get('/src/app/StoryModel.js', function(req, res) {
   res.sendFile((__dirname + '/src/app/StoryModel.js'));
 });

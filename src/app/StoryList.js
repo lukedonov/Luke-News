@@ -3,6 +3,7 @@
   function StoryList() {
     this.listOfStories = []
     this.storyListView = new StoryListView(this.listOfStories)
+    this.key = process.env.API_KEY
   }
 
   StoryList.prototype.addStory = function(storyModel) {
@@ -10,7 +11,7 @@
   }
 
   StoryList.prototype.getStories = function() {
-    const fetchPromise = fetch('https://content.guardianapis.com/search?api-key=70163cb6-b815-4de0-aa0a-7438a67f0243' );
+    const fetchPromise = fetch('https://content.guardianapis.com/search?api-key=' + process.env.API_KEY );
     fetchPromise.then(response => {
       return response.json();
     }).then(stories => {

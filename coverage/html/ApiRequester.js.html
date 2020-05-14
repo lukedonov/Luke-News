@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for StoryListView.js</title>
+    <title>Code coverage report for ApiRequester.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> StoryListView.js</h1>
+        <h1><a href="index.html">All files</a> ApiRequester.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
@@ -76,44 +76,56 @@
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(exports) { </span>
-  function <span class="fstat-no" title="function not covered" >StoryListView(</span>list) {
-<span class="cstat-no" title="statement not covered" >    this.list = list</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(exports) {</span>
+  function <span class="fstat-no" title="function not covered" >ApiRequest(</span>) {
+    
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  StoryListView.prototype.viewHeadlines = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
-<span class="cstat-no" title="statement not covered" >    console.log(this.list)</span>
-    var string = <span class="cstat-no" title="statement not covered" >''</span>
-<span class="cstat-no" title="statement not covered" >    this.list.map(<span class="fstat-no" title="function not covered" >ar</span>ticle =&gt; <span class="cstat-no" title="statement not covered" >string += `&lt;a href='#stories/${article.id}'&gt;&lt;div class='story'&gt;&lt;p&gt;${article.headline}&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;`)</span></span>
-    // var headlines = new Array();
-    // for (i=0; i &lt; (this.list).length; i++) {
-    //   headlines.push(this.list[i].headline)
-    // }
-    // return "&lt;div&gt;&lt;div class='list'&gt;&lt;div class='story'&gt;&lt;p&gt;" + (headlines.join("&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class='list'&gt;&lt;div class='story'&gt;&lt;p&gt;")) + "&lt;/p&gt;&lt;/div&gt;&lt;/div&lt;/div&gt;"
-<span class="cstat-no" title="statement not covered" >    return string</span>
+<span class="cstat-no" title="statement not covered" >  ApiRequest.prototype.getStories = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+    const fetchPromise = <span class="cstat-no" title="statement not covered" >fetch('https://content.guardianapis.com/search?api-key=70163cb6-b815-4de0-aa0a-7438a67f0243');</span>
+<span class="cstat-no" title="statement not covered" >    fetchPromise.then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      return response.json();</span>
+    }).then(<span class="fstat-no" title="function not covered" >st</span>ories =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log("stories recieved from api")</span>
+<span class="cstat-no" title="statement not covered" >      for(i = 0; i &lt; 10; i++) {</span>
+        var story = <span class="cstat-no" title="statement not covered" >stories.response.results[i]</span>
+<span class="cstat-no" title="statement not covered" >        this.addStory(new StoryModel(story.webTitle, story.webUrl))</span>
+      }
+<span class="cstat-no" title="statement not covered" >      document.getElementById("stories").innerHTML = this.listOfStories[0].headline</span>
+     
+    }).catch(<span class="fstat-no" title="function not covered" >fu</span>nction (error) {
+<span class="cstat-no" title="statement not covered" >      console.warn('Something went wrong.', error);</span>
+    });
   }
 &nbsp;
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  exports.StoryListView = StoryListView</span>
+<span class="cstat-no" title="statement not covered" >  exports.ApiRequest = ApiRequest</span>
 })(this)</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

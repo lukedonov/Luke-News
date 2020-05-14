@@ -1,4 +1,5 @@
 (function(exports) { 
+
   function StoryList() {
     this.listOfStories = []
     this.storyListView = new StoryListView(this.listOfStories)
@@ -9,7 +10,7 @@
   }
 
   StoryList.prototype.getStories = function() {
-    const fetchPromise = fetch('https://content.guardianapis.com/search?api-key=70163cb6-b815-4de0-aa0a-7438a67f0243');
+    const fetchPromise = fetch('https://content.guardianapis.com/search?api-key=70163cb6-b815-4de0-aa0a-7438a67f0243' );
     fetchPromise.then(response => {
       return response.json();
     }).then(stories => {

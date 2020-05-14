@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
@@ -78,48 +78,69 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >function StoryList() {</span>
-  this.listOfStories = []
-}
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(exports) { </span>
 &nbsp;
-StoryList.prototype.addStory = function(storyModel) {
-  this.listOfStories.push(storyModel)
-}
+  function <span class="fstat-no" title="function not covered" >StoryList(</span>) {
+<span class="cstat-no" title="statement not covered" >    this.listOfStories = []</span>
+<span class="cstat-no" title="statement not covered" >    this.storyListView = new StoryListView(this.listOfStories)</span>
+  }
 &nbsp;
-StoryList.prototype.getStories = function() {
-  const fetchPromise = fetch('https://content.guardianapis.com/search?api-key=70163cb6-b815-4de0-aa0a-7438a67f0243');
-  fetchPromise.then(response =&gt; {
-    return response.json();
-  }).then(stories =&gt; {
-    // console.log(this.listOfStories)
-    // console.log(stories.response.results)
-    for(i = 0; i &lt; 10; i++) {
-      var story = stories.response.results[i]
-      this.addStory(new StoryModel(story.webTitle, story.webUrl))
-    }
-  })
-}
+<span class="cstat-no" title="statement not covered" >  StoryList.prototype.addStory = <span class="fstat-no" title="function not covered" >fu</span>nction(storyModel) {</span>
+<span class="cstat-no" title="statement not covered" >    this.listOfStories.push(storyModel)</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  StoryList.prototype.getStories = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+    const fetchPromise = <span class="cstat-no" title="statement not covered" >fetch('https://content.guardianapis.com/search?api-key=70163cb6-b815-4de0-aa0a-7438a67f0243' );</span>
+<span class="cstat-no" title="statement not covered" >    fetchPromise.then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      return response.json();</span>
+    }).then(<span class="fstat-no" title="function not covered" >st</span>ories =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log(stories.response.results[0].apiUrl)</span>
+<span class="cstat-no" title="statement not covered" >      for(i = 0; i &lt; 10; i++) {</span>
+        var story = <span class="cstat-no" title="statement not covered" >stories.response.results[i]</span>
+<span class="cstat-no" title="statement not covered" >        this.addStory(new StoryModel(story.webTitle, story.webUrl,i))</span>
+      }
+<span class="cstat-no" title="statement not covered" >      document.getElementById("stories").innerHTML = this.storyListView.viewHeadlines()</span>
+    }).catch(<span class="fstat-no" title="function not covered" >fu</span>nction (error) {
+<span class="cstat-no" title="statement not covered" >      console.warn('Something went wrong.', error);</span>
+    });
+  }
+<span class="cstat-no" title="statement not covered" >  exports.StoryList = StoryList</span>
+})(this)
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -127,7 +148,7 @@ StoryList.prototype.getStories = function() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 11 2020 15:50:23 GMT+0100 (British Summer Time)
+                at Wed May 13 2020 22:19:40 GMT+0100 (British Summer Time)
             </div>
         </div>
         <script src="prettify.js"></script>

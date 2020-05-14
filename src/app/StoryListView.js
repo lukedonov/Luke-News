@@ -1,4 +1,5 @@
 (function(exports) { 
+
   function StoryListView(list) {
     this.list = list
   }

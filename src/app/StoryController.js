@@ -21,7 +21,8 @@
         
   function showNote(story) {
     // console.log(controller.storyList)
-    document.getElementById("stories").innerHTML = controller.storyList[story].body
+    var summary = new ArticleSummary()
+    summary.makeApiRequest(controller.storyList[story].body)
   };
 
   showStory()

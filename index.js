@@ -1,27 +1,23 @@
 const express = require('express');
 const app = express();
+var router = require('./src/app/routeHandlers')
+var requester = require('./src/app/ApiRequester')
+
 
 require('dotenv').config()
 
-console.log(process.env)
-
+const fetch = require("node-fetch")
 const http = require('http');
 const server = http.createServer();
 server.on('request', (app)); 
-//const server = require('http').createServer(app);
 
-server.listen(8080, 'localhost', function () {
-  console.log('Server listening on port 8080')
-})
-
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+app.get('/api/stories', async (req, res) => {
+  const apiUrl = 'https://content.guardianapis.com/search?api-key=' + process.env.API_KEY
+  const fetchResponse = await fetch(apiUrl)
+  const json = await fetchResponse.json()
+  res.json(json)
 });
-
-app.get('/api/stories', function(req, res) {
-
-});
-
+  
 app.get('/src/app/StoryModel.js', function(req, res) {
   res.sendFile((__dirname + '/src/app/StoryModel.js'));
 });
@@ -46,3 +42,7 @@ app.get('/src/app/ArticleSummary.js', function(req, res) {
 app.get('/stylesheet.css', function(req, res) {
   res.sendFile((__dirname + '/stylesheet.css'));
 });
+
+server.listen(8080, 'localhost', function () {
+  console.log('Server listening on port 8080')
+})

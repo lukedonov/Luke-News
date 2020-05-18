@@ -21,6 +21,15 @@ app.get('/api/stories', async (req, res) => {
   const json = await fetchResponse.json()
   res.json(json)
 });
+
+app.get('/api/:url', async (req, res) => {
+  console.log(req.params)
+  const apiUrl = 'http://api.meaningcloud.com/summarization-1.0?key=' + process.env.SUMMARY_KEY + '&url=' + req.params.url + "&sentences=10"
+  // const apiUrl = 'http://api.meaningcloud.com/summarization-1.0?key=0bf7073346b1a790bab2a9fbb2e099db&url=https://www.theguardian.com/global-development/2020/may/15/west-africa-facing-food-crisis-as-coronavirus-spreads&sentences=10'
+  const fetchResponse = await fetch(apiUrl)
+  const json = await fetchResponse.json()
+  res.json(json)
+});
   
 app.get('/src/app/StoryModel.js', function(req, res) {
   res.sendFile((__dirname + '/src/app/StoryModel.js'));

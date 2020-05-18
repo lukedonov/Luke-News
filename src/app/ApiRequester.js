@@ -2,7 +2,7 @@ var credentials = require('./Credentials')
 const fetch = require("node-fetch")
 
 module.exports = function guardianRequest(){
-  const fetchPromise = fetch('https://content.guardianapis.com/search?api-key=70163cb6-b815-4de0-aa0a-7438a67f0243');
+  const fetchPromise = fetch('/api/stories');
   fetchPromise.then(response => {
     return response.json();
   }).then(stories => {

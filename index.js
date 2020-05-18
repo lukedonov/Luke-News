@@ -11,6 +11,10 @@ const http = require('http');
 const server = http.createServer();
 server.on('request', (app)); 
 
+app.get('/', function(req, res) {
+  res.sendFile((__dirname + '/index.html'));
+});
+
 app.get('/api/stories', async (req, res) => {
   const apiUrl = 'https://content.guardianapis.com/search?api-key=' + process.env.API_KEY
   const fetchResponse = await fetch(apiUrl)

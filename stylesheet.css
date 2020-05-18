@@ -4,14 +4,19 @@
 }
 
 .story{
+  text-align: center;
   border-radius: 5px;
   border: black solid;
   margin-bottom: 5px;
-  font-size: 25px;
+  font-size: 45px;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: left;
   font-family: 'Helvetica Neue';
+}
+
+p{
+  width: 640px;
 }
 
 .list{
@@ -30,6 +35,15 @@
   font-size: 50px;
   font-family: 'Helvetica Neue';
 }
+
+#thumbnail{
+  height: auto;
+  width:320px;
+  float: right; 
+  margin: 0px 0px 15px 15px;
+  margin-top: -200px;
+}
+
 
 
 

@@ -1,8 +1,5 @@
 const express = require('express');
 const app = express();
-var router = require('./src/app/routeHandlers')
-var requester = require('./src/app/ApiRequester')
-
 
 require('dotenv').config()
 
@@ -16,16 +13,15 @@ app.get('/', function(req, res) {
 });
 
 app.get('/api/stories', async (req, res) => {
-  const apiUrl = 'https://content.guardianapis.com/search?api-key=' + process.env.API_KEY
+  const apiUrl = 'https://content.guardianapis.com/search?api-key=' + process.env.API_KEY + '&show-fields=thumbnail'
   const fetchResponse = await fetch(apiUrl)
   const json = await fetchResponse.json()
   res.json(json)
 });
 
-app.get('/api/:url', async (req, res) => {
-  console.log(req.params)
-  const apiUrl = 'http://api.meaningcloud.com/summarization-1.0?key=' + process.env.SUMMARY_KEY + '&url=' + req.params.url + "&sentences=10"
-  // const apiUrl = 'http://api.meaningcloud.com/summarization-1.0?key=0bf7073346b1a790bab2a9fbb2e099db&url=https://www.theguardian.com/global-development/2020/may/15/west-africa-facing-food-crisis-as-coronavirus-spreads&sentences=10'
+app.get('/api/summary/:url', async (req, res) => {
+  const url = req.params.url
+  const apiUrl = 'http://api.meaningcloud.com/summarization-1.0?key=' + process.env.SUMMARY_KEY + '&url=' + url + "&sentences=10"
   const fetchResponse = await fetch(apiUrl)
   const json = await fetchResponse.json()
   res.json(json)

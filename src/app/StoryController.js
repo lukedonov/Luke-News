@@ -20,9 +20,9 @@
   };
         
   function showNote(story) {
-    // console.log(controller.storyList)
+    const article = controller.storyList[story]
     var summary = new ArticleSummary()
-    summary.makeApiRequest(controller.storyList[story].body)
+    summary.makeApiRequest(article.body)
   };
 
   showStory()

@@ -22,7 +22,7 @@
   function showNote(story) {
     const article = controller.storyList[story]
     var summary = new ArticleSummary()
-    summary.makeApiRequest(article.body, article.headline)
+    summary.makeApiRequest(article.body, article.headline, article.thumbnailUrl)
   };
 
   showStory()

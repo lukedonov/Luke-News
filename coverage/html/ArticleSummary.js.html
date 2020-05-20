@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for StoryListView.js</title>
+    <title>Code coverage report for ArticleSummary.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> StoryListView.js</h1>
+        <h1><a href="index.html">All files</a> ArticleSummary.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
@@ -70,19 +70,12 @@
 <a name='L11'></a><a href='#L11'>11</a>
 <a name='L12'></a><a href='#L12'>12</a>
 <a name='L13'></a><a href='#L13'>13</a>
-<a name='L14'></a><a href='#L14'>14</a>
-<a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L14'></a><a href='#L14'>14</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -90,33 +83,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(exports) { </span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(exports){</span>
+  function <span class="fstat-no" title="function not covered" >ArticleSummary(</span>) {
 &nbsp;
-  function <span class="fstat-no" title="function not covered" >StoryListView(</span>list) {
-<span class="cstat-no" title="statement not covered" >    this.list = list</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  StoryListView.prototype.viewHeadlines = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
-    var string = <span class="cstat-no" title="statement not covered" >''</span>
-<span class="cstat-no" title="statement not covered" >    this.list.map(<span class="fstat-no" title="function not covered" >ar</span>ticle =&gt; <span class="cstat-no" title="statement not covered" >string += `&lt;a href='#stories/${article.id}'&gt;&lt;div class='story'&gt;&lt;p&gt;${article.headline}&lt;/p&gt;&lt;div class='imgplaceholder' &gt;&lt;img id='thumbnail' src='${article.thumbnailUrl}'&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;`)</span></span>
-<span class="cstat-no" title="statement not covered" >    return string</span>
+<span class="cstat-no" title="statement not covered" >  ArticleSummary.prototype.makeApiRequest = <span class="fstat-no" title="function not covered" >as</span>ync (url, headline, img) =&gt; {</span>
+    const apiUrl = <span class="cstat-no" title="statement not covered" >`/api/summary/${encodeURIComponent(url)}`</span>
+    const response = <span class="cstat-no" title="statement not covered" >await fetch(apiUrl)</span>
+    const json = <span class="cstat-no" title="statement not covered" >await response.json()</span>
+<span class="cstat-no" title="statement not covered" >    document.getElementById("stories").innerHTML = `&lt;div&gt;&lt;h1&gt;${headline}&lt;/h1&gt;&lt;img src='${img}'&gt;&lt;div class='summarybody'&gt;${json.summary}&lt;/div&gt;&lt;a href='${url}'class='articleUrl'&gt;Link to full article&lt;/a&gt;&lt;/div&gt;`</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  StoryListView.prototype.viewArticle = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
-    var string = <span class="cstat-no" title="statement not covered" >''</span>
-<span class="cstat-no" title="statement not covered" >    this.list.map(<span class="fstat-no" title="function not covered" >ar</span>ticle =&gt; <span class="cstat-no" title="statement not covered" >string += `&lt;div class='articleHeadline'&gt;${article.headline}&lt;/div&gt;&lt;div class='articleImg'&gt;&lt;img src='${article.thumbnailUrl}'&gt;&lt;/div&gt;`)</span></span>
-<span class="cstat-no" title="statement not covered" >    return string</span>
-  }
-&nbsp;
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  exports.StoryListView = StoryListView</span>
+<span class="cstat-no" title="statement not covered" >  exports.ArticleSummary = ArticleSummary</span>
 })(this)</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

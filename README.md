@@ -1,18 +1,18 @@
 # News Application
 
-Brief description of what the project is
+This is a News Summary application to help you get a quick and efficient summar of the latest stories. 
 
 ## Getting started
 
-`git clone path-to-your-repo`
-`command_to_install_dependencies` (e.g. `bundle`)
+`git clone https://github.com/lukedonov/Luke-News`
+`npm install`
 
 ## Usage
 
-`command_to_start` (e.g. `rackup` or `rails s`)
-Navigate to `http://localhost:4567/`
+`npm start`
+Navigate to `http://localhost:8080/`
 
 
 ## Running tests
 
-`test_command` (e.g. `rspec`)
+`npm test`

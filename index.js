@@ -21,7 +21,7 @@ app.get('/api/stories', async (req, res) => {
 
 app.get('/api/summary/:url', async (req, res) => {
   const url = req.params.url
-  const apiUrl = 'http://api.meaningcloud.com/summarization-1.0?key=' + process.env.SUMMARY_KEY + '&url=' + url + "&sentences=10"
+  const apiUrl = 'http://api.meaningcloud.com/summarization-1.0?key=' + process.env.SUMMARY_KEY + '&url=' + url + "&sentences=5"
   const fetchResponse = await fetch(apiUrl)
   const json = await fetchResponse.json()
   res.json(json)

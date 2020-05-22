@@ -12,8 +12,10 @@ app.get('/', function(req, res) {
   res.sendFile((__dirname + '/index.html'));
 });
 
-app.get('/api/stories', async (req, res) => {
-  const apiUrl = 'https://content.guardianapis.com/search?api-key=' + process.env.API_KEY + '&show-fields=thumbnail'
+app.get('/api/stories/:page', async (req, res) => {
+  console.log(req.params.page)
+  var page = req.params.page
+  const apiUrl = `https://content.guardianapis.com/search?page=${page}&api-key=${process.env.API_KEY}&show-fields=thumbnail`
   const fetchResponse = await fetch(apiUrl)
   const json = await fetchResponse.json()
   res.json(json)

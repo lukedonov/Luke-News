@@ -44,6 +44,22 @@ p{
   margin-top: -200px;
 }
 
+#filter{
+  float: right;
+  font-size: 30px;
+}
+
+#nextPage{
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.buttons{
+  text-align: center;
+}
+
 
 
 

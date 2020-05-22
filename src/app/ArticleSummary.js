@@ -3,7 +3,7 @@
 
   }
 
-  ArticleSummary.prototype.makeApiRequest = async (url, headline, img) => {
+  ArticleSummary.prototype.outputSummary = async (url, headline, img) => {
     const apiUrl = `/api/summary/${encodeURIComponent(url)}`
     const response = await fetch(apiUrl)
     const json = await response.json()

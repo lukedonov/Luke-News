@@ -57,5 +57,5 @@ app.get('/stylesheet.css', function(req, res) {
 });
 
 server.listen(PORT, 'localhost', function () {
-  console.log('Server listening on port ${PORT}')
+  console.log(`Server listening on port ${PORT}`)
 })

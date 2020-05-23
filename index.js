@@ -8,6 +8,8 @@ const http = require('http');
 const server = http.createServer();
 server.on('request', (app)); 
 
+const PORT = process.env.PORT || 8080;
+
 app.get('/', function(req, res) {
   res.sendFile((__dirname + '/index.html'));
 });
@@ -54,6 +56,6 @@ app.get('/stylesheet.css', function(req, res) {
   res.sendFile((__dirname + '/stylesheet.css'));
 });
 
-server.listen(8080, 'localhost', function () {
-  console.log('Server listening on port 8080')
+server.listen(PORT, 'localhost', function () {
+  console.log('Server listening on port ${PORT}')
 })

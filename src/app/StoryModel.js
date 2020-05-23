@@ -1,8 +1,7 @@
 (function(exports) { 
-  function StoryModel(headline,body,id,thumbnailUrl) {
+  function StoryModel(headline,body,thumbnailUrl) {
     this.headline = headline;
     this.body = body;
-    this.id = id
     this.thumbnailUrl = thumbnailUrl
   }
 

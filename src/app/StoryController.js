@@ -26,16 +26,14 @@
   };
 
   function showNextPage() {
-    var click = document.getElementById("nextPage") 
+    var click = document.getElementById("moreStoriesBtn") 
     click.addEventListener('click', changePage)
   };
 
   function changePage() {
-    controller.storyList.nextPage();
-    console.log('clicked')
     controller.storyList.getStories()
+    console.log(controller)
   }
-
   
   showNextPage()
   showStory()

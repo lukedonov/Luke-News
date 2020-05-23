@@ -10,11 +10,6 @@
     this.listOfStories.push(storyModel)
   }
 
-  StoryList.prototype.nextPage = function() {
-    // this.page += 1
-    console.log('hello')
-  }
-
   StoryList.prototype.getStories = function() {
     var page = this.page += 1
     const fetchPromise = fetch(`/api/stories/${page}`);
@@ -26,7 +21,7 @@
       // console.log(stories.response.results[0].apiUrl)
       for(i = 0; i < 10; i++) {
         var story = stories.response.results[i]
-        this.addStory(new StoryModel(story.webTitle, story.webUrl, i, story.fields.thumbnail))
+        this.addStory(new StoryModel(story.webTitle, story.webUrl, story.fields.thumbnail))
       }
       document.getElementById("stories").innerHTML = this.storyListView.viewHeadlines()
     }).catch(function (error) {

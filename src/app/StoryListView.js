@@ -6,9 +6,9 @@
 
   StoryListView.prototype.viewHeadlines = function() {
     var string = ''
-    var buttons = `<div class='buttons'><button id='nextPage' value='helo'>Next page</button></div>`
+    // var buttons = `<div class='buttons'><button id='nextPage' value='helo'>Next page</button></div>`
     this.list.map(article => string += `<a href='#stories/${article.id}'><div class='story'><p>${article.headline}</p><div class='imgplaceholder' ><img id='thumbnail' src='${article.thumbnailUrl}'></div></div></a>`)
-    return string + buttons
+    return string
   }
 
   StoryListView.prototype.viewArticle = function() {

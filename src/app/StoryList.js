@@ -3,11 +3,16 @@
   function StoryList() {
     this.listOfStories = []
     this.storyListView = new StoryListView(this.listOfStories)
-    this.page = 1
+    this.page = 0
   }
 
   StoryList.prototype.addStory = function(storyModel) {
     this.listOfStories.push(storyModel)
+  }
+
+  StoryList.prototype.nextPage = function() {
+    // this.page += 1
+    console.log('hello')
   }
 
   StoryList.prototype.getStories = function() {

@@ -16,8 +16,8 @@
   }
 
   StoryList.prototype.getStories = function() {
-    console.log(this.page)
-    const fetchPromise = fetch(`/api/stories/${this.page}`);
+    var page = this.page += 1
+    const fetchPromise = fetch(`/api/stories/${page}`);
     fetchPromise.then(response => {
       console.log(response)
       return response.json();

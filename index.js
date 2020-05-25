@@ -58,6 +58,10 @@ app.get('/stylesheet.css', function(req, res) {
   res.sendFile((__dirname + '/stylesheet.css'));
 });
 
-server.listen(port, 'localhost', function () {
-  console.log(`Server listening on port ${port}`)
-})
+// server.listen(port, 'localhost', function () {
+//   console.log(`Server listening on port ${port}`)
+// })
+
+app.listen(port ,function(){
+  console.log("up and running on port "+ port);
+});

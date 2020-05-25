@@ -8,7 +8,9 @@ const http = require('http');
 const server = http.createServer();
 server.on('request', (app)); 
 
-const PORT = process.env.PORT || 8080;
+var port = process.env.PORT || 8080;
+
+app.set('port', port);
 
 app.get('/', function(req, res) {
   res.sendFile((__dirname + '/index.html'));
@@ -56,6 +58,6 @@ app.get('/stylesheet.css', function(req, res) {
   res.sendFile((__dirname + '/stylesheet.css'));
 });
 
-server.listen(PORT, 'localhost', function () {
-  console.log(`Server listening on port ${PORT}`)
+server.listen(port, 'localhost', function () {
+  console.log(`Server listening on port ${port}`)
 })

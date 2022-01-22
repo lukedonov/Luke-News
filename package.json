@@ -25,6 +25,6 @@
     "karma-coverage": "^2.0.2",
     "karma-jasmine": "^3.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^3.1.1"
   }
 }
